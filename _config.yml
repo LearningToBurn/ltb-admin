@@ -1,0 +1,51 @@
+title: Fire Learn
+description: Learning site for FIRE!
+exclude: [README.md]
+include: [".well-known"]
+
+# applies pretty for all
+permalink: pretty
+plugins:
+  - jekyll-relative-links
+
+repository: LearningToBurn/ltb-theme@v2.0.7
+remote_theme: LearningToBurn/ltb-theme@v2.0.7
+
+
+defaults:
+  -
+    scope:
+      path: "_lessons"
+    values:
+      layout: "lesson"
+  -
+    scope:
+      path: "_lessons/Check"
+    values:
+      theme: "Check"
+  -
+    scope:
+      path: "_lessons/Plan"
+    values:
+      theme: "Plan"
+  -
+    scope:
+      path: "_lessons/Prepare"
+    values:
+      theme: "Prepare"
+  -
+    scope:
+      path: "_lessons/Do"
+    values:
+      theme: "Do"  
+  -
+    scope:
+      path: "_lessons/Post-Burn"
+    values:
+      theme: "Post-Burn"  
+
+collections:
+  lessons:
+    output: true
+    sort_by: module_order
+    permalink: /:path
