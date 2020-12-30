@@ -8,3 +8,13 @@
   max-width: 8em;
 }
 
+.chart {
+  width: 400px;
+  height: 320px;
+  min-width: 400px;
+  min-height: 320px;
+  max-width: 1vw;
+  max-height: calc( 1vw / 400 * 320 );
+  display: inline-block;
+  overflow: hidden;
+}
