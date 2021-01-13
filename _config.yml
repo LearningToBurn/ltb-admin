@@ -11,6 +11,7 @@ plugins:
 repository: LearningToBurn/ltb-theme@v2.0.13
 remote_theme: LearningToBurn/ltb-theme@v2.0.13
 
+learntrack: https://learntrack-func.azurewebsites.net
 
 defaults:
   -

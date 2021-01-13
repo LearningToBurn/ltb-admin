@@ -1,9 +1,12 @@
+---
+---
+
 LTB_API_KEY="asdf"
 
 function GetData(token){
   return function(path, handler){
     $.ajax({
-      url: `http://localhost:7071/api/${path}`,
+      url: `{{ site.learntrack }}/api/${path}`,
       headers: { 
         "Authorization": `Bearer ${token}`,
         "X-API-KEY": LTB_API_KEY
