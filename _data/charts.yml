@@ -8,10 +8,6 @@ dashboard:
     ylabel: count
   - 
     title: Length of Session
-    data: https://gist.githubusercontent.com/claruspeter/523ce415a72973513be05f31279b1e11/raw/2920f1c711d209acbf6427286fafcfa49cc061fa/session-length.tsv
+    data: http://localhost:7071/api/admin/toppages.tsv
     xlabel: mins
     ylabel: count
-  - 
-    title: Theme Completion
-    data: https://gist.githubusercontent.com/claruspeter/fbba75c40e569195ce49a79275f34eae/raw/a99cef939db8175e1fa90579a9cf766f68324bdf/completness.tsv
-    ylabel: "%"

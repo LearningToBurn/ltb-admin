@@ -8,8 +8,8 @@ permalink: pretty
 plugins:
   - jekyll-relative-links
 
-repository: LearningToBurn/ltb-theme@v2.0.12
-remote_theme: LearningToBurn/ltb-theme@v2.0.12
+repository: LearningToBurn/ltb-theme@v2.0.13
+remote_theme: LearningToBurn/ltb-theme@v2.0.13
 
 
 defaults:

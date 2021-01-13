@@ -3,7 +3,7 @@
 &nbsp;
 
 <script>
-  new roughViz.Bar(
+  const {{include.param.title | replace: " ", "_" }} = new roughViz.Bar(
   {
     element: '#{{include.param.title | slugify }}',
     data: '{{include.param.data}}',
@@ -18,4 +18,6 @@
     width: 400,
   }
 );
+
+
 </script>
