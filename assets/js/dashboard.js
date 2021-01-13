@@ -1,20 +1,19 @@
 ---
 ---
 
-LTB_API_KEY="asdf"
 
 function GetData(token){
   return function(path, handler){
     $.ajax({
-      url: `{{ site.learntrack }}/api/${path}`,
+      url: `{{ site.learntrack.url }}/api/${path}`,
       headers: { 
         "Authorization": `Bearer ${token}`,
-        "X-API-KEY": LTB_API_KEY
+        "X-API-KEY": `{{ site.learntrack.api_key }}`
       },
       method: "GET",
       data: {
         year: 2021,
-        limit: 5
+        limit: 3
       }      
     }).done(handler)
   }
@@ -32,10 +31,11 @@ function GetAllData(token){
 }
 
 var loggedIn = function(token){
-  if(googleUser === null)
+  if(googleAuthor.googleUser === null)
     $('.pageContent').html("Reload once signed in to view")
   else{
     GetAllData(token)
   }
 }
+googleAuthor.authSuccess = loggedIn;
 
