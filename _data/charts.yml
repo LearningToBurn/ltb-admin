@@ -6,8 +6,8 @@ dashboard:
     values: values
     xlabel: time
     ylabel: count
-  - 
-    title: Length of Session
-    data: http://localhost:7071/api/admin/toppages.tsv
-    xlabel: mins
-    ylabel: count
+  # - 
+  #   title: Length of Session
+  #   data: http://localhost:7071/api/admin/toppages.tsv
+  #   xlabel: mins
+  #   ylabel: count

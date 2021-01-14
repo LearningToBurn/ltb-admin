@@ -15,7 +15,9 @@ function GetData(token){
         year: 2021,
         limit: 3
       }      
-    }).done(handler)
+    })
+    .done(handler)
+    .fail(failed);
   }
 }
 
@@ -23,9 +25,13 @@ function GetAllData(token){
   const api = GetData(token)
   api("admin/topPages", data =>{
       $("#top3").html("")
-      data.forEach(line => {
-        $("#top3").append($(`<li>${line.src} (${line.count} students)</li>`))
-      })
+      if(Array.isArray(data)){
+        data.forEach(line => {
+          $("#top3").append($(`<li>${line.src} (${line.count} students)</li>`))
+        })
+      }else{
+        $("#top3").html(data)
+      }
     }
   )
 }
@@ -39,3 +45,6 @@ var loggedIn = function(token){
 }
 googleAuthor.authSuccess = loggedIn;
 
+function failed(){
+  window.location = "/"
+}
