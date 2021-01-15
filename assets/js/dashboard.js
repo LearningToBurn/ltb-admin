@@ -28,7 +28,7 @@ function GetAllData(token){
       $("#top3").html("")
       if(Array.isArray(data)){
         data.forEach(line => {
-          $("#top3").append($(`<li>${line.src} (${line.count} students)</li>`))
+          $("#top3").append($(`<li>${line.label} (${line.value} students)</li>`))
         })
       }else{
         $("#top3").html(data)
@@ -38,7 +38,7 @@ function GetAllData(token){
   const keys = Object.keys(charts);
   keys.forEach( url => {
     api(url, data =>{
-      const d = {labels: data.map(line => line.src), values: data.map(line => line.count)}
+      const d = {labels: data.map(line => line.label), values: data.map(line => line.value)}
       charts[url].data = d
       charts[url].drawFromObject()
     })

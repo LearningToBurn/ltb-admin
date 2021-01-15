@@ -2,5 +2,5 @@ dashboard:
   - 
     title: Time of day
     data: admin/byhour
-    xlabel: page
+    xlabel: hour
     ylabel: count
