@@ -1,13 +1,6 @@
 dashboard:
   - 
-    title: Time of Day
-    data: https://gist.githubusercontent.com/claruspeter/d7499fc6ea573af418d8faeadb44b230/raw/c6b72b521465d483528f5256d128dc2777f3a4ce/time-of-day.tsv
-    labels: labels
-    values: values
-    xlabel: time
+    title: Time of day
+    data: admin/byhour
+    xlabel: page
     ylabel: count
-  # - 
-  #   title: Length of Session
-  #   data: http://localhost:7071/api/admin/toppages.tsv
-  #   xlabel: mins
-  #   ylabel: count

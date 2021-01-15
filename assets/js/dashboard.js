@@ -2,6 +2,7 @@
 ---
 
 
+
 function GetData(token){
   return function(path, handler){
     $.ajax({
@@ -34,6 +35,14 @@ function GetAllData(token){
       }
     }
   )
+  const keys = Object.keys(charts);
+  keys.forEach( url => {
+    api(url, data =>{
+      const d = {labels: data.map(line => line.src), values: data.map(line => line.count)}
+      charts[url].data = d
+      charts[url].drawFromObject()
+    })
+  })
 }
 
 var loggedIn = function(token){
@@ -45,6 +54,8 @@ var loggedIn = function(token){
 }
 googleAuthor.authSuccess = loggedIn;
 
-function failed(){
-  window.location = "/"
+function failed(xhr){
+  if(xhr.status == 403 || xhr.status == 401)
+    window.location = "/"
 }
+

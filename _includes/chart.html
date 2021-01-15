@@ -3,18 +3,19 @@
 &nbsp;
 
 <script>
-  const {{include.param.title | replace: " ", "_" }} = new roughViz.Bar(
+  charts['{{ include.param.data }}'] = new roughViz.Bar(
   {
     element: '#{{include.param.title | slugify }}',
-    data: '{{include.param.data}}',
-    labels: '{{include.param.labels | default: "labels"}}',
-    values: '{{include.param.values | default: "values"}}',
+    data: {
+      labels: [],
+      values: []
+    },
     title: '{{include.param.title}}',
     xLabel: '{{include.param.xlabel}}',
     yLabel: '{{include.param.ylabel}}',
     strokeWidth: 3,
     fillWeight: 1.5,
-    height: 320,
+    height: 300,
     width: 400,
   }
 );
