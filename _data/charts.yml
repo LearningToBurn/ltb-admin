@@ -1,6 +1,6 @@
 dashboard:
   - 
     title: Time of day
-    data: admin/byhour
+    data: reports/byhour
     xlabel: hour
     ylabel: count

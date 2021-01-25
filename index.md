@@ -11,3 +11,8 @@ layout: dashboard
 {% for chart in site.data.charts.dashboard %}
 {% include chart.html param=chart %}
 {% endfor %}
+
+## Achievements
+
+* (Loading...)
+{: id="ach" }
