@@ -54,7 +54,7 @@ function prepareData(token){
 
     GetAllData: function(failed){
       DATA.GetData("reports/topPages", {year: 2021, limit: 3}, data => DATA.asList(data, "#top3", line => `${line.label} (${line.value} students)`), failed)
-      DATA.GetData("admin/achievements", {}, data => DATA.asList(data, "#ach", line => `<a href="editAchievement?id=${line.name}">${line.name} (${line.requirement.case})</a>`), failed)
+      DATA.GetData("admin/achievements", {}, data => DATA.asList(data, "#ach", line => `<a href="editAchievement?id=${line.name}">${line.name} </a>`), failed)
       const keys = Object.keys(charts);
       keys.forEach( url => {
         DATA.GetData(url, {year: 2021, limit: 24}, data =>{

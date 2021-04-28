@@ -1,6 +1,38 @@
 
+
 <form action="{{site.learntrack.url}}/{{ include.action }}">
   <p><label for="name">Name</label><input name="name"/></p>
-  <p><label for="requirement">Requirement</label><input name="requirement"/></p>
+  <p><label for="description">Description</label><input name="description" style="width: 300px"/></p>
+  <h3>Conditions</h3>
+  <span id="addCondition">+ Add Condition</span>
 </form>
 
+
+<div id="restrictionTemplate" class="restriction" style="border: 1px solid lightgrey; padding: 0.5em; border-radius: 0.5em; display: none;">
+  <p><label for="restriction">Restriction</label>
+    <select name="restriction">
+      <option value="VisitPrefix">VisitPrefix</option>
+      <option value="LastNDays">LastNDays</option>
+      <option value="WithinNDays">WithinNDays</option>
+    </select>
+  </p>
+  <p><label for="restrictionValue">Value</label><input name="restrictionValue"/></p>
+</div>
+
+<div id="conditionTemplate" class="condition" style="border: 1px solid grey; padding: 0.5em; border-radius: 0.5em; display: none;">
+  <p><label for="calculation">Calculation</label>
+    <select name="calculation">
+      <option value="Count">Count</option>
+      <option value="IntervalInDays">IntervalInDays</option>
+    </select>
+  </p>
+  <p><label for="comparison">Comparison</label>
+    <select name="comparison">
+      <option value="AtLeast">AtLeast</option>
+      <option value="AtMost">AtMost</option>
+    </select>
+  </p>
+  <p><label for="comparisonValue">Value</label><input name="comparisonValue" type="number" step="1" min="0"/></p>
+  <h4>Restrictions</h4>
+  <span id="addRestriction" >+ Add Restriction</span>
+</div>
