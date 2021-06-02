@@ -8,8 +8,8 @@ permalink: pretty
 plugins:
   - jekyll-relative-links
 
-repository: LearningToBurn/ltb-theme@v2.0.31
-remote_theme: LearningToBurn/ltb-theme@v2.0.31
+repository: LearningToBurn/ltb-theme@v2.0.33
+remote_theme: LearningToBurn/ltb-theme@v2.0.33
 
 brand: napkin
 
