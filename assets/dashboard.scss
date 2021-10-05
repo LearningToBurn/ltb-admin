@@ -23,3 +23,23 @@ label {
   min-width: 8em;
   display: inline-block;
 }
+
+.chart {
+  color: black !important;
+}
+
+body.brand_scion .section_0, body.brand_scion .section4 {
+  .chart{
+    .title{
+      color: var(--reverse_color);
+      fill: var(--reverse_color);
+    }
+    .labelText, .tick{
+      color: var(--reverse_color);
+      fill: var(--reverse_color);
+    }
+  }
+  h4{
+    color: var(--border_color);
+  }
+}

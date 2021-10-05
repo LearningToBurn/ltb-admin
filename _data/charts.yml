@@ -1,6 +1,15 @@
 dashboard:
   - 
-    title: Time of day
-    data: reports/byhour
+    title: Top Page Visits
+    data: reports/topPages
+    xlabel: page
+    ylabel: count
+    style: pie
+    limit: 10
+  - 
+    title: Time of day (UTC)
+    data: reports/byHour
     xlabel: hour
     ylabel: count
+    style: chart
+    limit: 24

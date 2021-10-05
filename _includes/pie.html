@@ -5,7 +5,7 @@
 <script>
   charts['{{ include.param.data }}'] = {
     ...{{ include.param  | jsonify }},
-    chart: new roughViz.Bar(
+    chart: new roughViz.Donut(
       {
         element: '#{{include.param.title | slugify }}',
         data: {
@@ -15,14 +15,14 @@
         title: '{{include.param.title}}',
         xLabel: '{{include.param.xlabel}}',
         yLabel: '{{include.param.ylabel}}',
-        strokeWidth: 3,
-        fillWeight: 1.5,
+        strokeWidth: 1,
+        fillWeight: 1,
+        legend: false,
         height: 300,
-        width: 400
+        width: 400,
       }
-    ),
+    )
   }
-
 
 
 </script>

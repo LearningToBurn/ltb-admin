@@ -15,11 +15,13 @@
 <body class="brand_{{page.brand | default: site.brand}} unchecked" onload="googleAuthor.appStart()">
     {% include nav.html %}
     <div class="dashboard">
-      <div class="pageBack">
-        <div class="pageContent ua_{{page.user_access}}">
-        {{content}}
+      <div class="page">
+        <div class="pageBack">
+          <div class="pageContent ua_{{page.user_access}}">
+          {{content}}
+          </div>
+          <span class="jumbo pageRestriction">This page is restricted.  Please sign in to view.</span> <!-- only shows when above is hidden-->
         </div>
-        <span class="jumbo pageRestriction">This page is restricted.  Please sign in to view.</span> <!-- only shows when above is hidden-->
       </div>
     </div>
     <footer>{% include footer.html %}</footer>
